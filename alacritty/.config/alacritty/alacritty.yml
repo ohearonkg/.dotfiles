@@ -1,0 +1,113 @@
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+schemes:
+
+  one_dark: &one_dark
+    primary:
+      background: '#282c34'
+      foreground: '#abb2bf'
+
+    normal:
+      black:   '#131613'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#abb2bf'
+
+    # Bright colors
+    bright:
+      black:   '#5c6370'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#ffffff'
+
+  night_fox: &night_fox
+    primary:
+      background: '0x192330'
+      foreground: '0xcdcecf'
+
+    normal:
+      black:   '0x393b44'
+      red:     '0xc94f6d'
+      green:   '0x81b29a'
+      yellow:  '0xdbc074'
+      blue:    '0x719cd6'
+      magenta: '0x9d79d6'
+      cyan:    '0x63cdcf'
+      white:   '0xdfdfe0'
+
+    bright:
+      black:   '0x475072'
+      red:     '0xd6616b'
+      green:   '0x58cd8b'
+      yellow:  '0xffe37e'
+      blue:    '0x84cee4'
+      magenta: '0xb8a1e3'
+      cyan:    '0x59f0ff'
+      white:   '0xf2f2f2'
+
+    indexed_colors:
+      - { index: 16, color: '0xf4a261' }
+      - { index: 17, color: '0xd67ad2' }
+
+colors: *night_fox
+
+background_opacity: 1.0
+
+font:
+  normal: 
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
+
+  # Point size
+  size: 14.0
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+  window:
+    decorations: full
+    padding:
+      x: 2
+      y: 2
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 10
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+
+# Key Bindings
+key_bindings:
+  - { key: Key6,   mods: Control,   chars: "\x1e" }
+
