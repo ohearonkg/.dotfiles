@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
+
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="alacritty,nvim,tmux"
+    STOW_FOLDERS="alacritty,tmux,zsh"
 fi
 
 if [[ -z $DOTFILES ]]; then
