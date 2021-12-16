@@ -1,10 +1,8 @@
-export ZSH=$HOME/.oh-my-zsh
+## Setup Startship Prompt
+eval "$(starship init zsh)"
 
-source $ZSH/oh-my-zsh.sh
+## Use CONTROL-Y To Accep Auto Suggestion
+bindkey '^y' autosuggest-accept
 
-ZSH_THEME="robbyrussell"
-
-plugins=(
-  git 
-  zsh-autosuggestions
-)
+## Source Auto Suggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
