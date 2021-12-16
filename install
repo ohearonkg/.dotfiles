@@ -6,7 +6,10 @@ $DOTFILES = $HOME/.dotfiles
 pushd $DOTFILES
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
+    echo "Removing ${folder} from stow"
     stow -D $folder
+
+    echo "Stowing ${folder}"
     stow $folder
 done
 popd
