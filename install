@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS = "alacritty,tmux,zsh,nvim,starship-prompt"
-DOTFILES = $HOME/.dotfiles
+STOW_FOLDERS="alacritty,tmux,zsh,nvim,starship-prompt"
+DOTFILES=$HOME/.dotfiles
 
 pushd $DOTFILES
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
