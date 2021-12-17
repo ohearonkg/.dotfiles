@@ -56,7 +56,7 @@ return require('packer').startup({function(use)
   -- Auto Complete / Suggestion Menu
   use {
     'hrsh7th/nvim-cmp',
-    config = get_config('nvim-cmp'
+    config = get_config('nvim-cmp')
   }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
