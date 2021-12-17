@@ -6,6 +6,12 @@ vim.cmd([[
   augroup end
 ]])
 
+-- returns the require for use in `config` parameter of packer's use
+-- expects the name of the config file
+function get_config(name)
+    return string.format("require(\"config/%s\")", name)
+end
+
 return require('packer').startup({function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -14,7 +20,10 @@ return require('packer').startup({function(use)
   use 'editorconfig/editorconfig-vim'
 
   -- Nightfox Color Theme
-  use 'EdenEast/nightfox.nvim'
+  use {
+    'EdenEast/nightfox.nvim',
+    config = get_config('nightfox')
+  }
 
   -- Commenting Sections
   use 'tpope/vim-commentary'
@@ -39,7 +48,8 @@ return require('packer').startup({function(use)
     requires = {
       'kyazdani42/nvim-web-devicons', 
       opt = true
-    }
+    },
+    config = get_config('lualine')
   }
 
   -- Auto Complete / Suggestion Menu
