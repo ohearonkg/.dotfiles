@@ -34,6 +34,7 @@ return require('packer').startup({function(use)
     requires = {
       'kyazdani42/nvim-web-devicons', 
     }
+    config = get_config('nvim-tree')
   }
 
   -- Neovim LSP Config
