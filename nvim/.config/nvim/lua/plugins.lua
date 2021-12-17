@@ -90,6 +90,7 @@ return require('packer').startup({function(use)
     requires = { 
       'nvim-lua/plenary.nvim'
     }
+    config = get_config('telescope')
   }
   use {
     'nvim-telescope/telescope-fzf-native.nvim', 
