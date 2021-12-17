@@ -93,7 +93,7 @@ return require('packer').startup({function(use)
     config = get_config('telescope')
   }
   use {
-    'nvim-telescope/telescope-fzf-native.nvim', 
+    'nvim-telescope/telescope-fzy-native.nvim', 
     run = 'make' 
   }
 
