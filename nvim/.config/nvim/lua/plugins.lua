@@ -1,10 +1,3 @@
--- Automatically Install Packer
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-  print("Installing packer close and reopen Neovim...")
-end
-
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
@@ -12,7 +5,6 @@ vim.cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
-
 
 return require('packer').startup({function(use)
   -- EditorConfig
@@ -88,7 +80,7 @@ return require('packer').startup({function(use)
   -- Treesitter
   use { 
     'nvim-treesitter/nvim-treesitter', 
-    'run' = ':TSUpdate'
+    run = ':TSUpdate'
   }
  
   -- Indent Indicators
@@ -103,6 +95,7 @@ return require('packer').startup({function(use)
     require('packer').sync()
   end
 end,
+
 -- Have packer use a popup window with a single border
 config = {
   display = {
