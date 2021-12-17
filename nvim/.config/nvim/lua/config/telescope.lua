@@ -1,4 +1,4 @@
-require('telescope').setup{
+require('telescope').setup({
   defaults = {
     file_sorter = require("telescope.sorters").get_fzy_sorter,
     prompt_prefix = " >",
@@ -13,7 +13,7 @@ require('telescope').setup{
       override_file_sorter = true,
     }
   }
-}
+})
 
 require('telescope').load_extension('fzy_native')
 

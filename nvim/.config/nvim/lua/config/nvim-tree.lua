@@ -1,4 +1,4 @@
-require('nvim-tree').setup {
+require('nvim-tree').setup({
   open_on_setup = true,
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
@@ -15,4 +15,4 @@ require('nvim-tree').setup {
     enable = true,
     ignore = false
   }
-}
+})
