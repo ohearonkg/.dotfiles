@@ -1,3 +1,6 @@
+## Add Path to fnm
+export PATH="$HOME/.fnm":$PATH
+
 ## Setup Startship Prompt
 eval "$(starship init zsh)"
 
@@ -13,4 +16,3 @@ bindkey '^y' autosuggest-execute
 ## Source Auto Suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export PATH="$HOME/.fnm":$PATH
