@@ -7,10 +7,10 @@ eval "$(starship init zsh)"
 ## Setup FNM to Manage Node Versions
 eval "$(fnm env)"
 
-## Use CONTROL-N To Accept Auto Suggestion
+## CONTROL-N Accept Auto Suggestion
 bindkey '^n' autosuggest-accept
 
-## Use CONTROL-Y To Execute Auto Suggestion
+## CONTROL-Y Execute Auto Suggestion
 bindkey '^y' autosuggest-execute
 
 ## Source Auto Suggestions
