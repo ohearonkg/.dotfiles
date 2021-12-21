@@ -17,7 +17,7 @@ require('lualine').setup({
       }, 
       {
         'diagnostics', 
-        sources={'nvim_lsp'},
+        sources={'nvim_diagnostics'},
         update_in_insert_mode = true
       }
     },
