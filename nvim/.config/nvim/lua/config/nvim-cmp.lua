@@ -1,8 +1,4 @@
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
-
 local lspkind = require("lspkind")
-lspkind.init()
-
 local cmp = require("cmp")
 
 cmp.setup({ 
@@ -27,19 +23,21 @@ cmp.setup({
 
   sources = cmp.config.sources({
     { name = "nvim_lsp", max_item_count = 4 },
+    { name = "luasnip", max_item_count = 4 },
     { name = "path" , max_item_count = 4 },
     { name = "buffer", keyword_length = 3 },
   }),
 
   formatting = {
-    format = lspkind.cmp_format {
+    format = lspkind.cmp_format({
       with_text = true,
       menu = {
-        buffer = "[buf]",
         nvim_lsp = "[LSP]",
-        path = "[path]",
+        luasnip = "[Snippet]",
+        buffer = "[Buffer]",
+        path = "[Path]",
       }
-    }
+    })
   },
 
   experimental = {
