@@ -6,6 +6,7 @@ end
 
 local options = {
   autoindent = true, -- Copy Ident From Current Line When Starting a New Line
+  completeopt = { "menu", "menuone", "noselect" }, -- Popup Menu Settings
   cursorline = true, -- Highlight Current Line
   errorbells = false, -- Do Not User Error Bells
   expandtab = true, -- Convert Tab to Spaces
