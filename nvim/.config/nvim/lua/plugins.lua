@@ -15,7 +15,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- Autocommand that reloads neovim whenever you save 
+-- the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -23,8 +24,8 @@ vim.cmd([[
   augroup end
 ]])
 
--- returns the require for use in `config` parameter of packer's use
--- expects the name of the config file
+-- Returns the require for use in `config` parameter 
+-- of packer's use expects the name of the config file
 function get_config(name)
     return string.format("require(\"config/%s\")", name)
 end
@@ -59,6 +60,9 @@ return require('packer').startup({function(use)
 
   -- LSP Kind
   use 'onsails/lspkind-nvim'
+
+  -- Install LSP Servers Locally
+  use 'williamboman/nvim-lsp-installer'
 
   -- Lua Line
   use {

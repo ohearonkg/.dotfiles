@@ -4,10 +4,6 @@ local cmp_nvim_lsp = require("cmp_nvim_lsp")
 -- here and within the keymaps.lua file
 local keymap_options = { noremap = true, silent = true }
 
-function set_buffer_key_map(mode, lhs, rhs) 
-  return vim.api.nvim_buf_set_keymap(buffer, mode, lhs, rhs, opts);
-end
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local signs = {
@@ -26,16 +22,17 @@ local diagnostic_config = {
   underline = true,
   severity_sort = true,
   float = {
-    focusable = false,
-    style = "minimal",
+    focusable = true,
     source = "always",
+    header = "",
+    prefix = "",
   },
 }
 
 local lsp_buffer_keymaps = {
   { lhs = "gD", rhs = "<cmd>lua vim.lsp.buf.declaration()<CR>" },
   { lhs = "gd", rhs = "<cmd>lua vim.lsp.buf.definition()<CR>" },
-  { lhs = "K", rhs = "<cmd>lua vim.lsp.buf.hover()<CR>" },
+  { lhs = "gh", rhs = "<cmd>lua vim.lsp.buf.hover()<CR>" },
   { lhs = "gi", rhs = "<cmd>lua vim.lsp.buf.implementation()<CR>" },
   { lhs = "<C-k>", rhs = "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
   { lhs = "<leader>rn", rhs = "<cmd>lua vim.lsp.buf.rename()<CR>" },
@@ -61,7 +58,7 @@ exported_config.setup = function()
 end
 
 -- When Attached To Buffer 
-exported_config.on_attach = function(buffer) 
+exported_config.on_attach = function(client, buffer) 
   -- Disable TS Server Formatting
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
@@ -69,7 +66,7 @@ exported_config.on_attach = function(buffer)
 
   -- Add LSP Buffer Key Maps
   for _, keymap in ipairs(lsp_buffer_keymaps) do
-    set_buffer_key_map(buffer, "n", keymap.lhs, keymap.rhs, keymap_options)
+    vim.api.nvim_buf_set_keymap(buffer, "n", keymap.lhs, keymap.rhs, keymap_options)
   end
 end
 
