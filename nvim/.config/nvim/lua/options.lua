@@ -1,3 +1,9 @@
+local function applyOptions(options)
+  for key, value in pairs(options) do
+    vim.opt[key] = value
+  end
+end
+
 local options = {
   autoindent = true, -- Copy Ident From Current Line When Starting a New Line
   cursorline = true, -- Highlight Current Line
@@ -22,9 +28,8 @@ local options = {
   splitright = true, -- Force Vertical Splits To Right of Current Window
   swapfile = false, -- Prevent Creation of Swap File
   tabstop = 2, -- Make Tab Equal To Two Spaces
+  termguicolors = true, -- Enables 24-bit RGB Colors
   wrap = false -- Prevents Long Lines From Wrapping 
 }
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
+applyOptions(options)
