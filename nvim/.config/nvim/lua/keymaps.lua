@@ -34,12 +34,12 @@ setKeyMapVisualMode(">", ">gv")
 setKeyMapVisualMode("<", "<gv")
 
 -- Move single line up and down
-setKeyMapNormalMode("<C-k>", ":m .-2<CR>==")
-setKeyMapNormalMode("<C-j>", ":m .+1<CR>==")
+setKeyMapNormalMode("<A-k>", ":m .-2<CR>==")
+setKeyMapNormalMode("<A-j>", ":m .+1<CR>==")
 
 -- Move bisual block selection up and down
-setKepMapVisualBlock("<C-j>", ":move '>+1<CR>gv-gv")
-setKepMapVisualBlock("<C-k>", ":move '<-2<CR>gv-gv")
+setKepMapVisualBlock("<A-j>", ":move '>+1<CR>gv-gv")
+setKepMapVisualBlock("<A-k>", ":move '<-2<CR>gv-gv")
 
 -- Find Files via Telescope
 setKeyMapNormalMode('<C-p>', '<cmd>Telescope git_files<cr>')
