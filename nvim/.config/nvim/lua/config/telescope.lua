@@ -16,5 +16,3 @@ require('telescope').setup({
 })
 
 require('telescope').load_extension('fzy_native')
-
-vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope git_files<cr>', {})

@@ -23,9 +23,6 @@ setKeyMapNormalMode("<S-h>", ":bprevious<CR>")
 -- Allow gf to open non-existant file 
 setKeyMapNormalMode("gf", ":edit <cfile><cr>")
 
--- Toggle File Tree
-setKeyMapNormalMode("<C-T>", ":NvimTreeToggle <cr>")
-
 -- Resize with arrows
 setKeyMapNormalMode("<C-Up>", ":resize +2<CR>")
 setKeyMapNormalMode("<C-Down>", ":resize -2<CR>")
@@ -43,3 +40,11 @@ setKeyMapNormalMode("<C-j>", ":m .+1<CR>==")
 -- Move bisual block selection up and down
 setKepMapVisualBlock("<C-j>", ":move '>+1<CR>gv-gv")
 setKepMapVisualBlock("<C-k>", ":move '<-2<CR>gv-gv")
+
+-- Find Files via Telescope
+setKeyMapNormalMode('<C-p>', '<cmd>Telescope git_files<cr>')
+-- Live Grep via Telescope
+setKeyMapNormalMode('<C-f>', '<cmd>Telescope live_grep<cr>')
+
+-- Toggle File Tree
+setKeyMapNormalMode("<C-T>", ":NvimTreeToggle <cr>")
