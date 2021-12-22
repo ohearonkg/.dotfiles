@@ -34,7 +34,7 @@ local lsp_buffer_keymaps = {
   { lhs = "gd", rhs = "<cmd>lua vim.lsp.buf.definition()<CR>" },
   { lhs = "gh", rhs = "<cmd>lua vim.lsp.buf.hover()<CR>" },
   { lhs = "gi", rhs = "<cmd>lua vim.lsp.buf.implementation()<CR>" },
-  { lhs = "<C-k>", rhs = "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
+  { lhs = "<C-K>", rhs = "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
   { lhs = "<leader>rn", rhs = "<cmd>lua vim.lsp.buf.rename()<CR>" },
   { lhs = "gr", rhs = "<cmd>lua vim.lsp.buf.references()<CR>" },
   { lhs = "<leader>ca", rhs = "<cmd>lua vim.lsp.buf.code_action()<CR>" },
