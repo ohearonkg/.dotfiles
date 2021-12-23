@@ -131,6 +131,16 @@ return require('packer').startup({function(use)
   -- Floating Terminal
   use 'numToStr/FTerm.nvim'
 
+  -- Formatters, Linters, etc.
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { 
+      'nvim-lua/plenary.nvim'
+    },
+    config = get_config('null-ls')
+  }
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
