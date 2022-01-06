@@ -5,7 +5,9 @@ export PATH="$HOME/.fnm":$PATH
 eval "$(starship init zsh)"
 
 ## Setup FNM to Manage Node Versions
-eval "$(fnm env)"
+## Where --use-on-cd enables FNM to respect versions of Node
+## specified within a .node-version of .nvmrc file
+eval "$(fnm env --use-on-cd)"
 
 ## CONTROL-N Accept Auto Suggestion
 bindkey '^n' autosuggest-accept
