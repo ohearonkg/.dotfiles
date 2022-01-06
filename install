@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="alacritty,tmux,zsh,nvim,starship-prompt"
+STOW_FOLDERS="alacritty,tmux,zsh,nvim,starship-prompt,i3"
 DOTFILES=$HOME/.dotfiles
 
 pushd $DOTFILES
