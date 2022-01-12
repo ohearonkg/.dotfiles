@@ -64,6 +64,10 @@ exported_config.on_attach = function(client, buffer)
     client.resolved_capabilities.document_formatting = false
   end
 
+  if client.name == "stylelint_lsp" then
+    client.resolved_capabilities.document_formatting = false
+  end
+
   -- Add LSP Buffer Key Maps
   for _, keymap in ipairs(lsp_buffer_keymaps) do
     vim.api.nvim_buf_set_keymap(buffer, "n", keymap.lhs, keymap.rhs, keymap_options)
