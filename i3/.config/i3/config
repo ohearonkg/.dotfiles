@@ -182,3 +182,9 @@ bar {
   position top
   status_command i3status
 }
+
+# Startup Nitrogen (GUI for wallpaper selection)
+exec --no-startup-id nitrogen --restore
+
+# Startup Picom Compositor (window blurring etc)
+exec --no-startup-id picom -b
