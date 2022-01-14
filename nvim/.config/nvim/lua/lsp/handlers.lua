@@ -39,7 +39,7 @@ local lsp_buffer_keymaps = {
   { lhs = "gr", rhs = "<cmd>lua vim.lsp.buf.references()<CR>" },
   { lhs = "<leader>ca", rhs = "<cmd>lua vim.lsp.buf.code_action()<CR>" },
   { lhs = "[d", rhs = "<cmd>lua vim.diagnostic.goto_prev()<CR>" },
-  { lhs = "gl", rhs = "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
+  { lhs = "gl", rhs = "<cmd>lua vim.diagnostic.open_float()<CR>" },
   { lhs = "]d", rhs = "<cmd>lua vim.diagnostic.goto_next()<CR>" },
   { lhs = "<leader>q", rhs = "<cmd>lua vim.diagnostic.setloclist()<CR>" }
 }
