@@ -1,5 +1,8 @@
 ## Add Path to fnm
-export PATH="$HOME/.fnm":$PATH
+export FNM_HOME="$HOME/.fnm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
+
+export PATH="$FNM_HOME:$PNPM_HOME:$PATH"
 
 ## Setup Startship Prompt
 eval "$(starship init zsh)"
@@ -17,4 +20,7 @@ bindkey '^y' autosuggest-execute
 
 ## Source Auto Suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
